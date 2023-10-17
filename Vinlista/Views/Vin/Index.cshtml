@@ -1,0 +1,23 @@
+﻿@model List<Vinlista.Models.Vin>
+
+<h1>Vinlista</h1>
+
+<div class="row">
+    @foreach (var vin in Model)
+    {
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Vinbild">
+                <div class="card-body">
+                    <h5 class="card-title">@vin.VinNamn</h5>
+                    <p class="card-text"><strong>Typ:</strong> @vin.VinTyp</p>
+                    <p class="card-text"><strong>Årgång:</strong> @vin.Argang</p>
+                    <p class="card-text"><strong>Alkoholhalt:</strong> @vin.AlkoholHalt</p>
+                    <p class="card-text"><strong>Pris:</strong> @vin.Pris kr</p>
+                    <p class="card-text"><strong>Land:</strong> @vin.Land</p>
+                    <p class="card-text"><strong>Producent:</strong> @vin.Producent</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>

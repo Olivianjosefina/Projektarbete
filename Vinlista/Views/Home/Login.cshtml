@@ -1,0 +1,21 @@
+﻿@model Vinlista.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Logga in";
+}
+
+<h2>Logga in</h2>
+
+<form asp-action="Login" method="post">
+    <div class="mb-3">
+        <label asp-for="AnvdandarNamn" class="form-label">Användarnamn:</label>
+        <input asp-for="AnvdandarNamn" class="form-control" />
+        <span asp-validation-for="AnvdandarNamn" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Losenord" class="form-label">Lösenord:</label>
+        <input asp-for="Losenord" type="password" class="form-control" />
+        <span asp-validation-for="Losenord" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Logga in</button>
+</form>
